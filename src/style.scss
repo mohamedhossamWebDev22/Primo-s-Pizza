@@ -1,0 +1,337 @@
+$font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+$c1 : #51a3d5;
+$c2 : #d23540;
+$bg : #232534;
+
+
+*{
+  margin: 0;
+  padding: 0;
+
+  font-family: $font;
+
+  border: 0;
+}
+
+body, html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: $bg;
+
+  color: white;
+
+
+  #tt{
+    font-family: 'Brush Script MT', cursive;
+    font-weight: lighter;
+  }
+
+  button{
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 4px $bg;
+    
+    padding: 1%;
+
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0px 0px 8px $bg;
+    }
+  }
+
+  .Icon{
+    font-size: 30px;
+    margin-top: 3%;
+
+    cursor: pointer;
+
+    color: white;
+    &:hover{
+      font-size: 35px;
+      text-shadow: 0px 0px 8px white;
+    }
+  }
+  .Sticker{
+    position: absolute;
+
+    width: 100px !important;
+
+    z-index: 0;
+  }  
+  .rS{
+    right: 20px;
+    top: 100px;
+  }
+  .lS{
+    
+    left: 20px;
+    top: 250px;
+  }
+
+  nav{
+    position: fixed;
+
+    width: 100%;
+
+    color: white;
+    background: $bg;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 0px 0px 8px $c1;
+
+    z-index: 9;
+    img{
+      width: 60px;
+    }
+    .Links{
+      display: flex;
+
+      width: 30%;
+      justify-content: space-around;
+      a{
+        color: $c1;
+
+        text-decoration: 0;
+        &:hover{
+          text-decoration: underline;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .section1{
+    text-align: center;
+
+    background: $bg;
+
+    padding: 5%;
+
+    position: relative;
+    img{
+      width: 400px;
+      &:hover{
+        filter: drop-shadow(0px 0px 4px $c2);
+      }
+    }
+    p{
+      color: $c2;
+
+      font-weight: bolder;
+      font-size: 20px;
+      a{
+        text-decoration: underline;
+        &:hover{
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .section2{
+    color: white;
+    background: $c2;
+
+    text-align: center;
+
+    padding: 8%;
+    position: relative;
+    h1{
+      font-size: 30px;
+      font-weight:normal;
+    }
+    h2{
+      color: $c1;
+
+      font-weight: bolder;
+      font-size: 35px;
+
+      margin-top: 2%;
+      margin-bottom: 2%;
+
+      &:hover{
+        text-shadow: 4px 4px 0px white;
+      }
+    }
+
+    button{
+      color: white;
+      background: $c1;
+
+      margin-top: 2%;
+
+      cursor: pointer;
+
+      font-size: 30px;
+    }
+  }
+  .section3{
+    color: white;
+    background: $c1;
+
+    text-align: center;
+
+    padding: 8%;
+
+    position: relative;
+    h1{
+      font-size: 30px;
+    }
+    p{
+      font-size: 35px;
+    }
+
+    button{
+      color: white;
+      background: $c2;
+
+      font-size: 25px;
+
+      margin-top: 2%;
+    }
+  }
+
+  .aboutT{
+    font-size: 20px;
+    
+    background: $c1;
+
+    text-align: center;
+    
+    padding-top: 18%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+  }
+
+  .MenuPage{
+    padding-top: 10%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding-left: 20%;
+    padding-right: 20%;
+    img{
+      width: 250px;
+      height: 400px;
+
+      margin-bottom: 5%;
+
+      border-radius: 15px;
+
+      box-shadow: 0px 0px 4px $c1;
+      &:hover{
+        box-shadow: 0px 0px 8px $c1;
+      }
+    }
+  }
+
+  footer{
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    
+    padding-top: 5%;
+    img{
+      width: 200px;
+    }
+    .txt{
+      width: 20%;
+
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+
+      div{
+        display: flex;
+        justify-content: space-around;
+
+        font-weight: 100;
+      }
+
+      .t{
+        border-top: 1px solid white;
+
+        padding: 2%;
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $c2; 
+}
+::-webkit-scrollbar-thumb {
+  background: $c1; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#3c84b1; 
+}
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  nav{
+    flex-direction: column;
+    .Links{
+      width: 100% !important;
+      
+      padding-bottom: 1%;
+    }
+  }
+
+  body{
+    #Logo{
+      width: 200px;
+    }
+    .Sticker{
+      width: 50px !important;
+    }
+    .lS{
+      left: 10px;
+    }
+    .rS{
+      right: 10px;
+    }
+  }
+  .section1, .section2, .section3{
+    padding: 20% !important;
+  }
+
+  .MenuPage{
+    justify-content: center !important;
+
+    padding-top: 50% !important;
+  }
+
+  .aboutT{
+    padding-top: 50% !important;
+  }
+
+
+  footer{
+    flex-direction: column;
+    .txt{
+      width: 80% !important;
+    }
+  }
+}
