@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import Footer from "../Components/Footer";
 
 import { useLayoutEffect } from 'react'
+import Animator from "../Components/Animator";
 
 
 const About = () => {
@@ -14,6 +15,7 @@ const About = () => {
     <>
       <NavBar />
 
+      <Animator>
       <h1 className="aboutT">
         Primo's is an American pizza concept based in Cairo. Known for its
         famously extra cheesy pizzas, Primo's uses only the highest quality
@@ -36,6 +38,7 @@ const About = () => {
       </h1>
 
       <Footer/>
+      </Animator>
     </>
   );
 };
